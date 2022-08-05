@@ -1,0 +1,13 @@
+{
+  "config": {
+    "output": "scraped.json",
+    "downloadPriority": ["2160p", "1080p", "720p", "480p"],
+    "startAtPage": 1
+  },
+
+  "comment": "You can edit that but it's not recommended",
+  "_internal": {
+    "ytsHost": "https://yts.torrentbay.to",
+    "browse": "/browse-movies"
+  }
+}

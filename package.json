@@ -1,0 +1,18 @@
+{
+  "name": "ytsscraper",
+  "version": "1.0.0",
+  "description": "Scrap torrent urls from YTS (https://yts.torrentbay.to/)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "update": "node scripts/update.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "node-html-parser": "^5.3.3"
+  },
+  "devDependencies": {},
+  "author": "RichardDorian",
+  "license": "MIT"
+}
