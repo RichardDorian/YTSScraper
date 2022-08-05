@@ -16,6 +16,12 @@ Scrap torrent urls from YTS (https://yts.torrentbay.to/)
 $ git clone https://github.com/RichardDorian/ytsscraper.git
 ```
 
+## Dependencides
+
+```bash
+$ npm install
+```
+
 ## Edit the config
 
 Open `config.json` and edit it to fit your needs, the default settings are fine though.
