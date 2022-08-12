@@ -1,6 +1,55 @@
 [
-  {"title":"Amityville Dollhouse","downloadUrl":"https://yts.torrentbay.to/torrent/download/E9FA9D9A9EC9B81880118478CAC31110F14AB971","quality":"1080p"},
-  {"title":"Amityville Horror: The Evil Escapes","downloadUrl":"https://yts.torrentbay.to/torrent/download/FD5C9FE770CEA0871809630018B53387881B63F4","quality":"1080p"},
-  {"title":"Rise of the Teenage Mutant Ninja Turtles: The Movie","downloadUrl":"https://yts.torrentbay.to/torrent/download/6EEF207AC8B8A4A2AF54DB6E39CE0814C58C80EA","quality":"1080p"},
-  {"title":"Carter","downloadUrl":"https://yts.torrentbay.to/torrent/download/F8FEA5AE5DB5B88C1409A9D02F11ADE931806A92","quality":"1080p"}
+  {
+    "title": "Secret Headquarters",
+    "downloadUrl": "https://yts.torrentbay.to/torrent/download/4AD386076E039410CB8AA32AD847C9C3750F07B1",
+    "quality": "1080p",
+    "subtitles": {}
+  },
+  {
+    "title": "Black Venus",
+    "downloadUrl": "https://yts.torrentbay.to/torrent/download/BC228136A344D34BD3CD9EE101ADAE83BF276E72",
+    "quality": "1080p",
+    "subtitles": {}
+  },
+  {
+    "title": "An American Rhapsody",
+    "downloadUrl": "https://yts.torrentbay.to/torrent/download/FADB404E04E8170EACE358835344497194585FB0",
+    "quality": "1080p",
+    "subtitles": {}
+  },
+  {
+    "title": "Fresh Bait",
+    "downloadUrl": "https://yts.torrentbay.to/torrent/download/7548D8D8AC14E22197587F90206D6019DC605AC1",
+    "quality": "1080p",
+    "subtitles": {}
+  },
+  {
+    "title": "Unhinged",
+    "downloadUrl": "https://yts.torrentbay.to/torrent/download/B79963DE29C77EF71505F27621E4A8B7D04D56A2",
+    "quality": "1080p",
+    "subtitles": {}
+  },
+  {
+    "title": "Night Raiders",
+    "downloadUrl": "https://yts.torrentbay.to/torrent/download/DE7739C251ACD685BFADAFDEB76A4CACBE5973A2",
+    "quality": "1080p",
+    "subtitles": [
+      {
+        "language": "Arabic",
+        "url": "https://yifysubtitles.org/subtitle/night-raiders-2021-arabic-yify-369668.zip"
+      },
+      {
+        "language": "English",
+        "url": "https://yifysubtitles.org/subtitle/night-raiders-2021-english-yify-369530.zip"
+      },
+      {
+        "language": "Indonesian",
+        "url": "https://yifysubtitles.org/subtitle/night-raiders-2021-indonesian-yify-369669.zip"
+      },
+      {
+        "language": "Japanese",
+        "url": "https://yifysubtitles.org/subtitle/night-raiders-2021-japanese-yify-427360.zip"
+      }
+    ]
+  }
 ]

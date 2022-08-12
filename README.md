@@ -61,7 +61,27 @@ Here is an example:
 {
   "title": "Joker",
   "downloadUrl": "https://yts.torrentbay.to/torrent/download/**********************************",
-  "quality": "2160p"
+  "quality": "2160p",
+  "subtitles": [ ... ]
+}
+```
+
+# About subtitles
+
+This program also scraps subtitles if present (using the `Download Subtitles` button from YTS)
+
+The subtitles are in the subtitles array with and looks like this
+
+```json
+{
+  ...
+  "subtitles": [
+    {
+      "language": "English",
+      "url": "https://yifysubtitles.org/subtitle/*****************************.zip"
+    },
+    ...
+  ]
 }
 ```
 

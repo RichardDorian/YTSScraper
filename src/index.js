@@ -1,49 +1,13 @@
 // @ts-check
 
-const axios = require('axios').default;
 const { config, _internal } = require('../config.json');
-const HTML = require('node-html-parser');
 const { createWriteStream } = require('node:fs');
+const { scrapMovie } = require('./movie');
+const { getPage } = require('./utils');
+const { getMovieCount, setStream } = require('./save');
 
 const stream = createWriteStream(config.output);
-let movieCount = 0;
-
-async function scrapMovie(url) {
-  const endpoint = url.replace(_internal.ytsHost, '');
-  const page = await getPage(endpoint);
-
-  const title = page.querySelector('#movie-info>div>h1')?.innerText;
-  if (!title) return;
-
-  const downloads = [...page.querySelectorAll('[rel=nofollow]')].filter(
-    (e) => e.classList.length === 0
-  );
-
-  let downloadUrl;
-  let quality;
-  for (const resolution of config.downloadPriority) {
-    for (const download of downloads) {
-      if (download.innerText.includes(resolution)) {
-        downloadUrl = download.getAttribute('href');
-        quality = resolution;
-        break;
-      }
-    }
-    if (downloadUrl) break;
-  }
-
-  if (!downloadUrl)
-    return console.warn(`Can't get download url for movie ${title}`);
-
-  console.log(`Movie scraped ${title} (count=${movieCount})`);
-
-  movieCount++;
-  saveMovie({
-    title,
-    downloadUrl,
-    quality,
-  });
-}
+setStream(stream);
 
 let currentPage = config.startAtPage;
 async function scrapPage() {
@@ -66,23 +30,13 @@ async function scrapPage() {
   await scrapPage();
 }
 
-async function getPage(endpoint) {
-  const response = await axios.get(_internal.ytsHost + endpoint);
-  return HTML.parse(response.data);
-}
-
 stream.write('[');
-let first = true;
-async function saveMovie(movie) {
-  stream.write((first ? '' : ',') + '\n  ' + JSON.stringify(movie));
-  first = false;
-}
 
 async function quit() {
   stream.write('\n]');
   stream.end();
   console.log(
-    `\n\nScraper exited (lastPageScraped=${currentPage}, moviesScraped=${movieCount})`
+    `\n\nScraper exited (lastPageScraped=${currentPage}, moviesScraped=${getMovieCount()})`
   );
   process.exit(0);
 }
